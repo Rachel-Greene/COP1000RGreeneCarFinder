@@ -2,7 +2,9 @@
 ## ------------------------------ Functions ------------------------------ ##
 def checkValidInput(testInput):
   if testInput == "1":
-    return True
+    print(f"{choice1Message}")
+    for a in range(0,5):
+      print(carMakes[a])
   elif testInput == "2":
     print("\nThank you for using AutoCountry Car Finder, good-bye!")
     exit()
@@ -25,14 +27,7 @@ welcomeMessage = """
 choice1Message = "\nThe AutoCountry sales manages has authorized the purchase and selling of the following vehicles: "
 
 
-## --------------------- Customer input, Validation --------------------- ##
+## --------------------- Run Function, Validation --------------------- ##
 print(welcomeMessage)
 customerInput = input()
 trueInput = checkValidInput(customerInput)
-
-
-## ----------------------- Logic, Customer Output ----------------------- ##
-if trueInput == True:
-  print(f"{choice1Message}")
-  for a in range(0,5):
-    print(carMakes[a])
